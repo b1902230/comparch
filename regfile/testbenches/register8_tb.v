@@ -23,7 +23,7 @@ module register_8;
 
     initial begin;
 
-        $dumpfile("C:/Users/B/Documents/comparch/regfile/waveform/register_8.vcd");
+        $dumpfile("");
         $dumpvars(0, register_8);
 
         clk = 0;
