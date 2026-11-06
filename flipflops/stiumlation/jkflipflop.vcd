@@ -1,0 +1,85 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "14.0 (devel)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002658444CDA0 .scope module, "jk_flip_flop_tb" "jk_flip_flop_tb" 2 1;
+ .timescale 0 0;
+v00000265844D4C60_0 .var "clk", 0 0;
+v00000265844D4DA0_0 .var "j", 0 0;
+v00000265844D5480_0 .var "k", 0 0;
+v00000265844D4EE0_0 .net "n_q", 0 0, L_00000265844D57A0;  1 drivers
+v00000265844D5160_0 .net "q", 0 0, L_00000265844D48A0;  1 drivers
+S_000002658444CF30 .scope module, "jkff" "jk_flip_flop" 2 10, 3 1 0, S_000002658444CDA0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "j";
+    .port_info 1 /INPUT 1 "k";
+    .port_info 2 /INPUT 1 "clk";
+    .port_info 3 /OUTPUT 1 "q";
+    .port_info 4 /OUTPUT 1 "n_q";
+L_00000265844772F0 .functor AND 1, v00000265844D4DA0_0, v00000265844D4C60_0, C4<1>, C4<1>;
+L_0000026584476FE0 .functor AND 1, L_00000265844772F0, L_00000265844D57A0, C4<1>, C4<1>;
+L_0000026584477280 .functor AND 1, v00000265844D5480_0, v00000265844D4C60_0, C4<1>, C4<1>;
+L_0000026584477360 .functor AND 1, L_0000026584477280, L_00000265844D48A0, C4<1>, C4<1>;
+L_00000265844771A0 .functor AND 1, L_00000265844D4F80, L_00000265844D57A0, C4<1>, C4<1>;
+L_0000026584477050 .functor AND 1, L_00000265844D5020, L_00000265844D48A0, C4<1>, C4<1>;
+v0000026584473FA0_0 .net *"_ivl_0", 0 0, L_00000265844772F0;  1 drivers
+v000002658448ACE0_0 .net *"_ivl_12", 0 0, L_00000265844771A0;  1 drivers
+v000002658444D0C0_0 .net *"_ivl_16", 0 0, L_0000026584477050;  1 drivers
+v000002658444D160_0 .net *"_ivl_2", 0 0, L_0000026584476FE0;  1 drivers
+v0000026584477740_0 .net *"_ivl_6", 0 0, L_0000026584477280;  1 drivers
+v00000265844777E0_0 .net *"_ivl_8", 0 0, L_0000026584477360;  1 drivers
+v00000265844D5200_0 .net "clk", 0 0, v00000265844D4C60_0;  1 drivers
+v00000265844D4B20_0 .net "j", 0 0, v00000265844D4DA0_0;  1 drivers
+v00000265844D4E40_0 .net "j_clk_nq", 0 0, L_00000265844D4F80;  1 drivers
+v00000265844D4D00_0 .net "k", 0 0, v00000265844D5480_0;  1 drivers
+v00000265844D5660_0 .net "k_clk_q", 0 0, L_00000265844D5020;  1 drivers
+v00000265844D4BC0_0 .net "n_q", 0 0, L_00000265844D57A0;  alias, 1 drivers
+v00000265844D4940_0 .net "q", 0 0, L_00000265844D48A0;  alias, 1 drivers
+L_00000265844D4F80 .reduce/nor L_0000026584476FE0;
+L_00000265844D5020 .reduce/nor L_0000026584477360;
+L_00000265844D48A0 .reduce/nor L_00000265844771A0;
+L_00000265844D57A0 .reduce/nor L_0000026584477050;
+    .scope S_000002658444CDA0;
+T_0 ;
+    %vpi_call 2 20 "$dumpfile", "C:/Users/B/Documents/comparch/flipflops/waveform/jkflipflop.vcd" {0 0 0};
+    %vpi_call 2 21 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002658444CDA0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000265844D4C60_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000265844D4DA0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000265844D5480_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000265844D4C60_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000265844D4DA0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000265844D5480_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000265844D4C60_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000265844D4DA0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000265844D5480_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000265844D4C60_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000265844D4DA0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000265844D5480_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "../testbenches/jkflipflop_tb.v";
+    "../rtl/jkflipflop.v";

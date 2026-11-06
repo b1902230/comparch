@@ -15,7 +15,7 @@ module d_flip_flop_tb;
 
     initial begin
 
-        $dumpfile("C:/Users/B/Documents/comparch/flipflops/waveform/flipflop.vcd");
+        $dumpfile("C:/Users/B/Documents/comparch/flipflops/waveform/dflipflop.vcd");
         $dumpvars(0, d_flip_flop_tb);
 
         d = 0;

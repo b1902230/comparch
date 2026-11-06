@@ -1,0 +1,72 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "14.0 (devel)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002B54351D940 .scope module, "d_flip_flop_tb" "d_flip_flop_tb" 2 1;
+ .timescale 0 0;
+v000002B5435A4010_0 .var "clk", 0 0;
+v000002B5435A3E30_0 .var "d", 0 0;
+v000002B5435A3890_0 .net "n_q", 0 0, L_000002B5435A4290;  1 drivers
+v000002B5435A4470_0 .net "q", 0 0, L_000002B5435A3C50;  1 drivers
+S_000002B54351DAD0 .scope module, "dff" "d_flip_flop" 2 9, 3 1 0, S_000002B54351D940;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "d";
+    .port_info 1 /INPUT 1 "clk";
+    .port_info 2 /OUTPUT 1 "q";
+    .port_info 3 /OUTPUT 1 "n_q";
+L_000002B54351DDA0 .functor AND 1, v000002B5435A3E30_0, v000002B5435A4010_0, C4<1>, C4<1>;
+L_000002B5435A4D70 .functor AND 1, L_000002B5435A3ED0, v000002B5435A4010_0, C4<1>, C4<1>;
+L_000002B5435A4E50 .functor AND 1, L_000002B5435A41F0, L_000002B5435A4290, C4<1>, C4<1>;
+L_000002B5435A4B40 .functor AND 1, L_000002B5435A46F0, L_000002B5435A3C50, C4<1>, C4<1>;
+v000002B543544E40_0 .net *"_ivl_10", 0 0, L_000002B5435A4E50;  1 drivers
+v000002B54355BA00_0 .net *"_ivl_14", 0 0, L_000002B5435A4B40;  1 drivers
+v000002B543544A60_0 .net *"_ivl_2", 0 0, L_000002B54351DDA0;  1 drivers
+v000002B543544760_0 .net *"_ivl_6", 0 0, L_000002B5435A4D70;  1 drivers
+v000002B54351DC60_0 .net "clk", 0 0, v000002B5435A4010_0;  1 drivers
+v000002B54351DD00_0 .net "d", 0 0, v000002B5435A3E30_0;  1 drivers
+v000002B543557B70_0 .net "d_clk", 0 0, L_000002B5435A41F0;  1 drivers
+v000002B543557C10_0 .net "n_d", 0 0, L_000002B5435A3ED0;  1 drivers
+v000002B5435A4790_0 .net "n_q", 0 0, L_000002B5435A4290;  alias, 1 drivers
+v000002B5435A4510_0 .net "nd_clk", 0 0, L_000002B5435A46F0;  1 drivers
+v000002B5435A4150_0 .net "q", 0 0, L_000002B5435A3C50;  alias, 1 drivers
+L_000002B5435A3ED0 .reduce/nor v000002B5435A3E30_0;
+L_000002B5435A41F0 .reduce/nor L_000002B54351DDA0;
+L_000002B5435A46F0 .reduce/nor L_000002B5435A4D70;
+L_000002B5435A3C50 .reduce/nor L_000002B5435A4E50;
+L_000002B5435A4290 .reduce/nor L_000002B5435A4B40;
+    .scope S_000002B54351D940;
+T_0 ;
+    %vpi_call 2 18 "$dumpfile", "C:/Users/B/Documents/comparch/flipflops/waveform/dflipflop.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002B54351D940 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002B5435A3E30_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002B5435A4010_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002B5435A3E30_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002B5435A4010_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002B5435A3E30_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002B5435A4010_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002B5435A3E30_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002B5435A4010_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "../testbenches/dflipflop_tb.v";
+    "../rtl/dflipflop.v";
