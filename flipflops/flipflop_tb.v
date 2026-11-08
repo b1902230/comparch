@@ -15,7 +15,7 @@ module d_flip_flop_tb;
 
     initial begin
 
-        $dumpfile("C:/Users/B/Documents/comparch/flipflops/flipflop.vcd");
+        $dumpfile("");
         $dumpvars(0, d_flip_flop_tb);
 
         d = 0;
@@ -59,7 +59,7 @@ module jk_flip_flop_tb;
 
     initial begin
 
-        $dumpfile("C:/Users/B/Documents/comparch/flipflops/flipflop.vcd");
+        $dumpfile("");
         $dumpvars(0, jk_flip_flop_tb);
 
       clk = 1;
@@ -107,7 +107,7 @@ module sr_flip_flop_tb;
 
     initial begin
 
-        $dumpfile("C:/Users/B/Documents/comparch/flipflops/flipflop.vcd");
+        $dumpfile("");
         $dumpvars(0, sr_flip_flop_tb);
 
         clk = 1;
