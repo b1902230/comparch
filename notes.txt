@@ -1,6 +1,0 @@
-Projects:
-- Reg File
-- Bus Aribter
-- RV32I inspired ALU
-- Small RAM/Cache
-- peripheral_subsystem
