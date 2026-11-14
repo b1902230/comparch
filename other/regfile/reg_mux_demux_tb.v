@@ -17,7 +17,15 @@ module register_8_tb;
 
     initial begin
 
-        $dumpfile("  always #5 clk = ~clk;")
+        $dumpfile("C:/Users/B/Documents/comparch/regfile/reg_mux_demux.v");
+        $dumpvars(0, register_8_tb);
+
+        clk = 0;
+        always #1 clk = !clk;
+
+        d = 0;
+        we = 0;
+        r = 0;
 
     end
 
