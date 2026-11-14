@@ -1,6 +1,6 @@
 module register_8(input [7:0] d, input we, input r, input clk, output [7:0] q);
 
-    always @(posedge clk) begin
+    always @(posedge clk or posedge r) begin
 
         if (r) begin
             q <= 0;
